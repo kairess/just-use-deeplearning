@@ -1,13 +1,15 @@
 import cv2
 import numpy as np
 
-net = cv2.dnn.readNetFromTorch('models/eccv16/starry_night.t7')
+net = cv2.dnn.readNetFromTorch('models/eccv16/la_muse.t7')
 
-img = cv2.imread('imgs/01.jpg')
+img = cv2.imread('imgs/02.jpg')
+
+h, w, c = img.shape
 
 img = cv2.resize(img, dsize=(500, int(h / w * 500)))
 
-h, w, c = img.shape
+img = img[162:513, 185:428]
 
 MEAN_VALUE = [103.939, 116.779, 123.680]
 blob = cv2.dnn.blobFromImage(img, mean=MEAN_VALUE)

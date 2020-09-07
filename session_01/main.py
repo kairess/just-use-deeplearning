@@ -8,6 +8,8 @@ while True:
     if not ret:
         break
 
+    cv2.rectangle(img, pt1=(721, 183), pt2=(878, 465), color=(255, 0, 0), thickness=2)
+
     cropped_img = img[183:465, 721:878]
 
     cv2.imshow('cropped_img', cropped_img)

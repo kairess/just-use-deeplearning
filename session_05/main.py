@@ -12,7 +12,7 @@ net.getLayer(net.getLayerId('class8_ab')).blobs = [pts_in_hull]
 
 net.getLayer(net.getLayerId('conv8_313_rh')).blobs = [np.full((1, 313), 2.606, np.float32)]
 
-img = cv2.imread('imgs/01.jpg')
+img = cv2.imread('imgs/02.jpg')
 
 h, w, c = img.shape
 
